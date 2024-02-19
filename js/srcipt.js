@@ -80,14 +80,10 @@ for(let seatBtn of seatBtns){
  // Next Button 
  let nextBtn = document.getElementById('next-btn')
  function nextPage(){
-    open("/success.html");
+    window.open("/success.html");
  }
 
-function cuppon(){
-    document.getElementById('copupon').addEventListener('keyup', function(e){
-        console.log(e)
-    })
-}
+
 
 
 function setOutPut(elementId, value){

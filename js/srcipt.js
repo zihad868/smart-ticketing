@@ -64,6 +64,8 @@ for(let seatBtn of seatBtns){
 
             setOutPut('grand-price', grandTotal);
 
+
+
             let btn = document.getElementById('apply-btn')
             btn.addEventListener('click', function(e){
                 let copupon = document.getElementById('copupon');
@@ -73,6 +75,13 @@ for(let seatBtn of seatBtns){
         }
     })
 }
+
+
+ // Next Button 
+ let nextBtn = document.getElementById('next-btn')
+ function nextPage(){
+    open("/success.html");
+ }
 
 function cuppon(){
     document.getElementById('copupon').addEventListener('keyup', function(e){

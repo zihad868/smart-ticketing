@@ -5,7 +5,7 @@ for(let seatBtn of seatBtns){
     countBooking = 0;
     totalPrice = 0;
     grandTotal = 0;
-    seatBtn.addEventListener('click', function(){
+    seatBtn.addEventListener('click', function(e){
 
         if(seatCount>= 0 && countBooking <= 3){
             seatBtn.style.backgroundColor = "green";
@@ -37,7 +37,7 @@ for(let seatBtn of seatBtns){
 
             
 
-            li_btn.innerText = 'btn';
+            li_btn.innerText = this.innerText;
             li_class.innerText = 'Economoy';
             li_price.innerText = 550;
 
@@ -64,11 +64,19 @@ for(let seatBtn of seatBtns){
 
             setOutPut('grand-price', grandTotal);
 
-            // Copupon Code
-            document.getElementById('copupon').addEventListener('click', function(event){
-                console.log(event.target.value)
+            let btn = document.getElementById('apply-btn')
+            btn.addEventListener('click', function(e){
+                let copupon = document.getElementById('copupon');
+                console.log(cuppon.innerText);
             })
+            
         }
+    })
+}
+
+function cuppon(){
+    document.getElementById('copupon').addEventListener('keyup', function(e){
+        console.log(e)
     })
 }
 

@@ -9,6 +9,11 @@ for(let seatBtn of seatBtns){
 
         if(seatCount>= 0 && countBooking <= 3){
             seatBtn.style.backgroundColor = "green";
+            seatBtn.disabled = true;
+
+            if(seatBtn.disabled == true){
+                seatBtn.style.color = 'white';
+            }
 
             const seatNumber = document.getElementById('seatNumber');
             let seatNumberStr = seatNumber.innerText;
@@ -93,3 +98,4 @@ for(let seatBtn of seatBtns){
 function setOutPut(elementId, value){
    document.getElementById(elementId).innerText = value;
 }
+

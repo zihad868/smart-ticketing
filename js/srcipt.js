@@ -68,14 +68,6 @@ for(let seatBtn of seatBtns){
             grandTotal = grandTotal + priceGrantInt;
 
             setOutPut('grand-price', grandTotal);
-
-
-
-            let btn = document.getElementById('apply-btn')
-            btn.addEventListener('click', function(e){
-                let copupon = document.getElementById('copupon');
-                console.log(cuppon.innerText);
-            })
             
         }
     })
@@ -92,8 +84,23 @@ for(let seatBtn of seatBtns){
     success.classList.remove('hidden')
  }
 
+function cupponApply(){
+    textVal = document.getElementById('copupon').value
+    const couponCode = 'NEW15';
+    const couponCodeCouple = 'Couple 20'
 
+    if(textVal === couponCode){
+        console.log("Cupon")
+    }
 
+    else if(textVal === couponCodeCouple){
+        console.log('cuple')
+    }
+
+    else{
+        console.log("Grant")
+    }
+}
 
 function setOutPut(elementId, value){
    document.getElementById(elementId).innerText = value;

@@ -1,10 +1,10 @@
 const seatBtns = document.getElementsByClassName('seat-btn')
 
 for(let seatBtn of seatBtns){
-    seatCount = 8;
-    countBooking = 0;
-    totalPrice = 0;
-    grandTotal = 0;
+    var seatCount = 8;
+    var countBooking = 0;
+    var totalPrice = 0;
+    var grandTotal = 0;
     seatBtn.addEventListener('click', function(e){
 
         if(seatCount>= 0 && countBooking <= 3){

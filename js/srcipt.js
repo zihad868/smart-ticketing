@@ -80,7 +80,11 @@ for(let seatBtn of seatBtns){
  // Next Button 
  let nextBtn = document.getElementById('next-btn')
  function nextPage(){
-    window.open("/success.html");
+    let mainSection = document.getElementById('main');
+    mainSection.classList.add('hidden')
+
+    let success = document.getElementById('sussess');
+    success.classList.remove('hidden')
  }
 
 

@@ -43,3 +43,9 @@
     background-repeat: no-repeat;
 }
 
+#seat-price ul{
+    display: flex;
+    list-style: none;
+    gap: 200px;
+    padding: 6px;
+}

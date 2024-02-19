@@ -203,7 +203,7 @@
                   <img src="./images/fare.png" alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title"><span>550</span> Taka</h2>
+                  <h2 class="card-title"><span id="ticket-price">550</span> Taka</h2>
                   <p>Per Seat</p>
                 </div>
               </div>
@@ -288,25 +288,37 @@
           </div>
 
 
+
+          <!-- Seat Price Calculation -->
           <div class="p-6 mt-5 bg-slate-300 rounded-xl">
             <h4 class="text-3xl font-semibold">Select Your Seat</h4>
 
             <div class="">
               <div class="flex list-none gap-48">
-                <li class="flex gap-1">Seat  <span class="num-book-seat">0</span></li>
+                <li class="flex gap-1">Seat  <span id="num-book-seat">0</span></li>
                 <li>Class</li>
                 <li>price</li>
               </div>
               <hr>
+
+
+              <!-- List of seat price and seatNumber -->
+              <div id="seat-price" class="">
+                <!-- <ul class="">
+                  <li>gfg</li>
+                  <li>eco</li>
+                  <li>155</li>
+                </ul> -->
+              </div>
               <div class="flex justify-between mt-6">
                 <h4>Price</h4>
-                <h4>BDT <span>1100</span></h4>
+                <h4>BDT <span id="total-price">120</span></h4>
               </div>
 
               <div>
                 <div class="p-3 bg-gray-400">
                   <form class="flex justify-between">
-                    <input class="p-2 border-none rounded-xl" type="text" placeholder="Have any copupon?">
+                    <input id="copupon" class="p-2 border-none rounded-xl" type="text" placeholder="Have any copupon?">
                     <button class="btn bg-green-700">Apply</button>
                   </form>
                 </div>
@@ -315,7 +327,7 @@
               <div>
                 <div class="flex justify-between mt-6">
                   <h4>Grand Total</h4>
-                  <h4>BDT <span>1100</span></h4>
+                  <h4>BDT <span id="grand-price">1100</span></h4>
                 </div>
               </div>
 

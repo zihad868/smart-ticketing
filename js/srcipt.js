@@ -71,6 +71,7 @@ for(let seatBtn of seatBtns){
             
         }
     })
+    
 }
 
 
@@ -90,15 +91,36 @@ function cupponApply(){
     const couponCodeCouple = 'Couple 20'
 
     if(textVal === couponCode){
-        console.log("Cupon")
+        let priceGrant = document.getElementById('grand-price').innerText;
+        let priceGrantInt = parseInt(priceGrant);
+
+        let coupon = priceGrantInt*0.15;
+
+        let price = priceGrantInt - coupon;
+        
+        setOutPut('grand-price', price);
+
+        let coupon_div = document.getElementById('coupon-section');
+        coupon_div.classList.add('hidden');
+
     }
 
     else if(textVal === couponCodeCouple){
-        console.log('cuple')
+        let priceGrant = document.getElementById('grand-price').innerText;
+        let priceGrantInt = parseInt(priceGrant);
+
+        let coupon = priceGrantInt*0.2;
+
+        let price = parseInt(priceGrantInt - coupon);
+        
+        setOutPut('grand-price', price);
+
+        let coupon_div = document.getElementById('coupon-section');
+        coupon_div.classList.add('hidden');
     }
 
     else{
-        console.log("Grant")
+        return 0;
     }
 }
 
